@@ -43,7 +43,7 @@ acc.withdraw(1500);
 acc.deposit(
 200);                       
 tr.log("Deposit ₹1000");     
-System.out.println("GOKUL RAM R");  
-System.out.println("2117240070090");  
+System.out.println("JANANI M");  
+System.out.println("2117240070123");  
 }  
 }
