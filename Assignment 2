@@ -1,0 +1,53 @@
+package Class;
+
+public class Assignment2 {
+
+    private String courseName = "Design Thinking";
+
+    // Static nested class
+    static class Module {
+        String moduleName;
+
+        Module(String moduleName) {
+            this.moduleName = moduleName;
+        }
+
+        void showModule() {
+            System.out.println("Module: " + moduleName);
+        }
+    }
+
+    // Inner class
+    class Instructor {
+        String name;
+
+        Instructor(String name) {
+            this.name = name;
+        }
+
+        void introduce() {
+            System.out.println("Instructor: " + name + " teaches " + courseName);
+        }
+
+        void assignModule(String moduleName) {
+            Module module = new Module(moduleName);
+            module.showModule();
+        }
+    }
+
+    public static void main(String[] args) {
+        // Using static nested class directly
+    	System.out.println("JANANI M");
+    	System.out.println("2117240070123");
+        Module staticModule = new Module("Empathy & Research");
+        staticModule.showModule();
+
+        System.out.println();
+
+        // Using inner class (requires outer class instance)
+        Assignment2 course = new Assignment2(); // ✅ Correct class name
+        Instructor instructor = course.new Instructor("Janani");
+        instructor.introduce();
+        instructor.assignModule("Prototyping & Feedback");
+    }
+}
