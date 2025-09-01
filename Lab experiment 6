@@ -1,0 +1,49 @@
+interface BankingService {     
+void 
+deposit(double amount);     void 
+withdraw(double amount);     
+double getBalance();  
+}  
+class Transaction {     public 
+void log(String msg) {  
+System.out.println("Transaction recorded: " + msg);  
+}  
+}  
+public class Account implements BankingService {     
+private double balance;  
+// constructor     public 
+Account(double initialBalance) {         
+this.balance = initialBalance;  
+}  
+public void deposit(double amount) {  
+if (amount <= 0) {  
+System.out.println("Invalid deposit amount");  
+} else {  
+balance += amount;  
+System.out.println("Balance = ₹" + balance);  
+}  
+}  
+public void withdraw(double amount) {         
+if (amount > balance) {  
+System.out.println("Insufficient funds");  
+} else {             -= amount;  
+balance 
+System.out.println("Balance = ₹" + balance);  
+}  
+}  
+public double getBalance() {         
+return balance;  
+}  
+public static void main(String[] args) {         
+Account acc = new Account(0);            
+Transaction tr = new Transaction();         
+acc.deposit(1000);                      
+acc.withdraw(500);                       
+acc.withdraw(1500);                      
+acc.deposit(
+200);                       
+tr.log("Deposit ₹1000");     
+System.out.println("GOKUL RAM R");  
+System.out.println("2117240070090");  
+}  
+}
