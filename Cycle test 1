@@ -1,0 +1,18 @@
+package Class;
+
+public class Sum {
+	public static void main(String[] arg) {
+		int sum=0;
+		for(int i=1;i<=100;i++) {
+			sum+=i;
+		}
+		System.out.println("JANANI M");
+		System.out.println("2117240070123");
+		System.out.println("Sum:"+sum);
+	}
+}
+
+
+Output: JANANI M
+        2117240070123
+        sum of numbers from 1 to 100:5050
