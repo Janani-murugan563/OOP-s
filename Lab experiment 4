@@ -1,0 +1,140 @@
+TC1: Car("Tesla", "Red") → Output: Car started
+
+public class Car {
+String model;
+String color;
+Car(String model, String color){
+	this.model=model;
+	this.color=color;
+	}
+void start() {
+	if(model!=null&&!model.isEmpty()) {
+		System.out.println("Car Started");
+	}else {
+		System.out.println("Car started(but model not shown)");
+	}
+}
+void stop() {
+	System.out.println("Car Stopped");
+}
+public static void main(String[] args) {
+System.out.println("JANANI M");
+    	System.out.println("2117240070123");
+	Car car1= new Car("Tesla","Red");
+	car1.start();
+	}
+}
+
+ 
+TC2: Car("BMW", "Black") → Output: Car started
+
+public class Car {
+String model;
+String color;
+Car(String model, String color){
+	this.model=model;
+	this.color=color;
+	}
+void start() {
+	if(model!=null&&!model.isEmpty()) {
+		System.out.println("Car Started");
+	}else {
+		System.out.println("Car started(but model not shown)");
+	}
+}
+void stop() {
+	System.out.println("Car Stopped");
+
+public static void main(String[] args) {
+System.out.println("JANANI M");
+    	System.out.println("2117240070123")
+	Car car2=new Car("BMW","Black");
+	car2.start();
+	}
+}
+ 
+
+TC3: Car model empty → Output: Car started (but model not shown)
+
+public class Car {
+String model;
+String color;
+Car(String model, String color){
+	this.model=model;
+	this.color=color;
+	}
+void start() {
+	if(model!=null&&!model.isEmpty()) {
+		System.out.println("Car Started");
+	}else {
+		System.out.println("Car started(but model not shown)");
+	}
+}
+void stop() {
+	System.out.println("Car Stopped");
+}
+public static void main(String[] args) {
+System.out.println("JANANI M");
+    	System.out.println("2117240070123");
+	Car car3=new Car("","Blue");
+	car3.start();
+	}
+}
+ 
+
+TC4: Start method not called → Output: Nothing
+
+public class Car {
+String model;
+String color;
+Car(String model, String color){
+	this.model=model;
+	this.color=color;
+	}
+void start() {
+	if(model!=null&&!model.isEmpty()) {
+		System.out.println("Car Started");
+	}else {
+		System.out.println("Car started(but model not shown)");
+	}
+}
+void stop() {
+	System.out.println("Car Stopped");
+}
+public static void main(String[] args) {
+System.out.println("JANANI M");
+    	System.out.println("2117240070123");
+
+	Car car4=new Car("Audi","White");
+	}
+}
+
+ 
+
+TC5: Call stop method only → Output: Car stopped
+
+public class Car {
+String model;
+String color;
+Car(String model, String color){
+	this.model=model;
+	this.color=color;
+	}
+void start() {
+	if(model!=null&&!model.isEmpty()) {
+		System.out.println("Car Started");
+	}else {
+		System.out.println("Car started(but model not shown)");
+	}
+}
+void stop() {
+	System.out.println("Car Stopped");
+}
+public static void main(String[] args) {
+System.out.println("JANANI M");
+    	System.out.println("2117240070123");
+	Car car5=new Car("Ford","Grey");
+	car5.stop();
+	}
+}
+
