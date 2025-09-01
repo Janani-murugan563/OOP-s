@@ -1,0 +1,111 @@
+TC1: n = 5 → Output: 0 1 1 2 3
+public class Fibonacci {
+	public static int fib(int n) {
+  if (n == 0)
+            return 0;
+        else if (n == 1)
+            return 1;
+        else
+            return fib(n - 1) + fib(n - 2);
+    }
+	public static void main(String[] args) {
+System.out.println("JANANI M");
+    	System.out.println("2117240070123");
+   int n = 5;  
+        for (int i = 0; i < n; i++) {
+            System.out.print(fib(i) + " ");
+        }
+    }
+}
+ 
+TC2: n = 7 → Output: 0 1 1 2 3 5 8
+public class Fibonacci {
+	public static int fib(int n) {
+   
+       if (n == 0)
+            return 0;
+        else if (n == 1)
+            return 1;
+        else
+            return fib(n - 1) + fib(n - 2);
+    }
+	public static void main(String[] args) {
+System.out.println("JANANI M");
+    	System.out.println("2117240070123");
+        int n = 7;  
+        for (int i = 0; i < n; i++) {
+            System.out.print(fib(i) + " ");
+        }
+    }
+}
+
+ 
+
+TC3: n = 1 → Output: 0
+public class Fibonacci {
+	public static int fib(int n) {
+if (n == 0)
+            return 0;
+        else if (n == 1)
+            return 1;
+        else
+            return fib(n - 1) + fib(n - 2);
+    }
+	public static void main(String[] args) {
+System.out.println("JANANI M");
+    	System.out.println("2117240070123");
+        int n = 1;  
+        for (int i = 0; i < n; i++) {
+            System.out.print(fib(i) + " ");
+        }
+    }
+}
+
+ 
+
+TC4: n = 0 → Output:
+public class Fibonacci {
+	public static int fib(int n) {
+        if (n == 0)
+            return 0;
+        else if (n == 1)
+            return 1;
+        else
+            return fib(n - 1) + fib(n - 2);
+    }
+	public static void main(String[] args) {
+System.out.println("JANANI M");
+    	System.out.println("2117240070123");
+        int n = 0;
+        for (int i = 0; i < n; i++) {
+            System.out.print(fib(i) + " ");
+        }
+    }
+}
+ 
+
+TC5: n = 10 → Output: 0 1 1 2 3 5 8 13 21 34
+public class Fibonacci {
+	public static int fib(int n) {
+      if (n == 0)
+            return 0;
+        else if (n == 1)
+            return 1;
+        else
+            return fib(n - 1) + fib(n - 2);
+    }
+	public static void main(String[] args) {
+System.out.println("JANANI M");
+    	System.out.println("2117240070123");
+        int n = 10;
+        for (int i = 0; i < n; i++) {
+            System.out.print(fib(i) + " ");
+        }
+    }
+}
+
+ 
+
+
+
+
