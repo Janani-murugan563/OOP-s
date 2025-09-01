@@ -111,8 +111,8 @@ int num=1 ;
 TC5: Input 0 → Output: Not Prime
 public class Prime {
             public static void main(String[] args) {
-System.out.println("Jaya Sonica S");
-    	System.out.println("2117240070125");
+System.out.println("JANANI M");
+    	System.out.println("2117240070123");
 int num=0;
 		boolean isPrime=true;
 		if(num<=1)
