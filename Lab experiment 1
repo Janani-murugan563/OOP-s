@@ -1,0 +1,70 @@
+TC1: Sum From 1 to 100 -> Expected: 5050
+public class Sum {
+	public static void main(String[] args) {
+		int sum=0;
+		for(int i=1;i<=100;i++) {
+			sum+=i;
+		}
+		System.out.println("JANANI M");
+		System.out.println("2117240070123");
+		System.out.println("Sum of numbers from 1 to 100 is:"+sum);
+		}
+ }
+ 
+
+TC2: Sum From 1 to 50 -> Expected: 1275
+public class Sum {
+public static void main(String[] args) {
+		int sum=0;
+		for(int i=1;i<=50;i++) {
+			sum+=i;
+		}
+System.out.println("JANANI M");
+		System.out.println("2117240070123");
+
+		System.out.println("Sum of numbers from 1 to 50 is:"+sum);
+		}
+}
+
+ 
+TC3: Sum from 1 to 10 → Expected: 55
+public class Sum {
+public static void main(String[] args) {
+		int sum=0;
+		for(int i=1;i<=10;i++) {
+			sum+=i;
+		}
+System.out.println("JANANI M");
+		System.out.println("2117240070123");
+System.out.println("Sum of numbers from 1 to 10 is:"+sum);
+		}
+}
+ 
+TC4: Sum from 50 to 100 → Expected: 3825
+public class Sum {
+	public static void main(String[] args) {
+		int sum=0;
+		for(int i=50;i<=100;i++) {
+			sum+=i; 
+		}
+System.out.println(“JANANI M”);
+		System.out.println(“2117240070123”);
+System.out.println("Sum of numbers from 50 to 100 is:"+sum);
+		}
+ }
+ 
+TC5: Sum from 1 to 1 → Expected: 1
+public class Sum {
+	public static void main(String[] args) {
+		int sum=0;
+		for(int i=1;i<=1;i++) {
+			sum+=i;
+		}
+		System.out.println(“Jaya Sonica S”);
+		System.out.println(“2117240070125”);
+		System.out.println("Sum of numbers from 1 to 1 is:"+sum);
+		}
+ }
+
+ 
+
