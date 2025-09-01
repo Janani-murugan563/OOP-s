@@ -1,0 +1,74 @@
+AIM
+To design and implement a simple yet extensible Document Management System in Java using object-oriented principles such as inheritance and constructors, enabling efficient creation, classification, and display of various document types like reports and invoices.
+
+ALGORITHM:
+The Document Management System is a console-based Java application that models real-world document handling using core OOP concepts. The system is built around a base class Document, which encapsulates common attributes such as title, author, and creation date. Specialized document types like Report and Invoice inherit from this base class, adding their own unique properties (e.g., department for reports, amount for invoices).
+Key features include:
+•	✅ Inheritance: Promotes code reuse and logical hierarchy by allowing subclasses to extend the base Document class.
+•	✅ Constructors: Used to initialize document objects with relevant data at the time of creation.
+•	✅ Polymorphism: Enables dynamic method overriding so each document type can display its details in a customized format.
+•	✅ Scalability: The structure allows easy addition of new document types (e.g., Memos, Contracts) without disrupting existing code.
+This project not only demonstrates technical proficiency in Java but also reflects thoughtful design—making the system intuitive.
+
+SOURCE CODE:
+// DocumentManagementSystem.java
+package Class;
+class Document {
+    protected String title;
+    protected String author;
+    protected String dateCreated;
+    // Constructor
+    public Document(String title, String author, String dateCreated) {
+        this.title = title;
+        this.author = author;
+        this.dateCreated = dateCreated;
+    }
+
+    // Method to display document details
+    public void displayDetails() {
+        System.out.println("📄 Title       : " + title);
+        System.out.println("✍️ Author      : " + author);
+        System.out.println("📅 Date Created: " + dateCreated);
+    }
+}
+class Report extends Document {
+    private String department;
+    // Constructor
+    public Report(String title, String author, String dateCreated, String department) {
+        super(title, author, dateCreated);
+        this.department = department;
+    }
+    @Override
+    public void displayDetails() {
+        super.displayDetails();
+        System.out.println("🏢 Department  : " + department);
+    }
+}
+class Invoice extends Document {
+    private double amount;
+    // Constructor
+    public Invoice(String title, String author, String dateCreated, double amount) {
+        super(title, author, dateCreated);
+        this.amount = amount;
+    }
+    @Override
+    public void displayDetails() {
+        super.displayDetails();
+        System.out.println("💰 Amount      : ₹" + amount);
+    }
+}
+public class DocumentManagementSystem {
+    public static void main(String[] args) {
+        // Creating objects
+        Document doc1 = new Report("Annual Report", "Janani", "2025-08-30", "Finance");
+        Document doc2 = new Invoice("Invoice #102", "Janani", "2025-09-01", 15000.75);
+
+        // Displaying details
+        System.out.println("📘 Document 1:");
+        doc1.displayDetails();
+        System.out.println("\n📗 Document 2:");
+        doc2.displayDetails();
+    }
+}
+
+ 
