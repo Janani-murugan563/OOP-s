@@ -1,0 +1,51 @@
+// Custom exception for invalid operations
+class InvalidRegistrationException extends Exception {
+    private static final long serialVersionUID = 1L; // Added to remove warning
+
+    public InvalidRegistrationException(String message) {
+        super(message);
+    }
+}
+
+class Course {
+    private String courseName;
+    private int seatsAvailable;
+
+    public Course(String courseName, int seatsAvailable) {
+        this.courseName = courseName;
+        this.seatsAvailable = seatsAvailable;
+    }
+
+    // Method to register a student
+    public void registerStudent(String studentName) throws InvalidRegistrationException {
+        if (seatsAvailable <= 0) {
+            throw new InvalidRegistrationException("Registration failed: No seats available in " + courseName);
+        }
+        if (studentName == null || studentName.trim().isEmpty()) {
+            throw new InvalidRegistrationException("Registration failed: Invalid student name.");
+        }
+
+        seatsAvailable--;
+        System.out.println("✅ Student " + studentName + " successfully registered for " + courseName);
+        System.out.println("Seats left: " + seatsAvailable);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Course javaCourse = new Course("Java Programming", 1);
+
+        try {
+            javaCourse.registerStudent("Alice");  // valid
+            javaCourse.registerStudent("Bob");    // will throw exception (no seats)
+        } catch (InvalidRegistrationException e) {
+            System.out.println("❌ Error: " + e.getMessage());
+        }
+
+        try {
+            javaCourse.registerStudent("");        // will throw exception (invalid name)
+        } catch (InvalidRegistrationException e) {
+            System.out.println("❌ Error: " + e.getMessage());
+        }
+    }
+}
