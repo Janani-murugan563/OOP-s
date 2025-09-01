@@ -1,0 +1,144 @@
+TC1: Input 2 → Output: Prime
+public class Prime {
+    public static void main(String[] args) {
+    	System.out.println("JANANI M");
+    	System.out.println("2117240070123");
+int num=2 ;
+boolean isPrime=true;
+if(num<=1)
+{
+	isPrime=false;
+}else {
+	for(int i=2;i<=Math.sqrt(num);i++){
+		if (num%i==0) {
+			isPrime=false;
+			break;
+		}
+	}
+}if (isPrime) {
+	System.out.println("Prime");
+}else {
+	System.out.println("Not Prime");
+}
+}
+    }
+
+ 
+
+TC2: Input 15 → Output: Not Prime
+public class Prime {
+            public static void main(String[] args) {
+System.out.println("JANANI M");
+    	System.out.println("2117240070123");
+
+		int num=15 ;
+		boolean isPrime=true;
+		if(num<=1)
+		{
+			isPrime=false;
+		}else {
+			for(int i=2;i<=Math.sqrt(num);i++){
+				if (num%i==0) {
+					isPrime=false;
+					break;
+				}
+			}
+		}if (isPrime) {
+			System.out.println("Prime");
+		}else {
+			System.out.println("Not Prime");
+		}
+	}
+}
+
+ 
+
+TC3: Input 17 → Output: Prime
+public class Prime {
+            public static void main(String[] args) {
+System.out.println("JANANI M");
+    	System.out.println("2117240070123");
+int num=17 ;
+		boolean isPrime=true;
+		if(num<=1)
+		{
+			isPrime=false;
+		}else {
+			for(int i=2;i<=Math.sqrt(num);i++){
+				if (num%i==0) {
+					isPrime=false;
+					break;
+				}
+			}
+		}if (isPrime) {
+			System.out.println("Prime");
+		}else {
+			System.out.println("Not Prime");
+		}
+	}
+}
+
+ 
+
+TC4: Input 1 → Output: Not Prime
+public class Prime {
+            public static void main(String[] args) {
+System.out.println("JANANI M");
+    	System.out.println("2117240070123");
+int num=1 ;
+		boolean isPrime=true;
+		if(num<=1)
+		{
+			isPrime=false;
+		}else {
+			for(int i=2;i<=Math.sqrt(num);i++){
+				if (num%i==0) {
+					isPrime=false;
+					break;
+				}
+			}
+		}if (isPrime) {
+			System.out.println("Prime");
+		}else {
+			System.out.println("Not Prime");
+		}
+	}
+
+}
+
+ 
+
+TC5: Input 0 → Output: Not Prime
+public class Prime {
+            public static void main(String[] args) {
+System.out.println("Jaya Sonica S");
+    	System.out.println("2117240070125");
+int num=0;
+		boolean isPrime=true;
+		if(num<=1)
+		{
+			isPrime=false;
+		}else {
+			for(int i=2;i<=Math.sqrt(num);i++){
+				if (num%i==0) {
+					isPrime=false;
+					break;
+				}
+			}
+		}if (isPrime) {
+			System.out.println("Prime");
+		}else {
+			System.out.println("Not Prime");
+		}
+	}
+
+}
+
+ 
+
+
+
+
+
+
+
