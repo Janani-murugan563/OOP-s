@@ -1,0 +1,80 @@
+import java.io.*;
+import java.net.*;
+
+// Main class renamed to avoid conflict with java.net.Socket
+public class SocketDemo {
+    public static void main(String[] args) {
+        System.out.println("JANANI M");
+        System.out.println("2117240070123");
+
+        // Start server in a separate thread
+        new Thread(new ServerTask()).start();
+
+        // Give server time to start
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            System.out.println("[Main] Interrupted: " + e.getMessage());
+        }
+
+        // Start client in a separate thread
+        new Thread(new ClientTask()).start();
+    }
+}
+
+// Server thread
+class ServerTask implements Runnable {
+    public void run() {
+        try (ServerSocket serverSocket = new ServerSocket(5000)) {
+            System.out.println("[Server] Online. Waiting for client...");
+
+            try (Socket clientSocket = serverSocket.accept();
+                 BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
+                 PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true)) {
+
+                System.out.println("[Server] Client connected.");
+
+                String clientMsg = in.readLine();
+                System.out.println("[Server] Received: " + clientMsg);
+
+                String reply = "Hello Client, message received!";
+                out.println(reply);
+                System.out.println("[Server] Reply sent.");
+
+            } catch (IOException e) {
+                System.out.println("[Server] Communication error: " + e.getMessage());
+            }
+
+            System.out.println("[Server] Connection closed.");
+
+        } catch (IOException e) {
+            System.out.println("[Server] Error: " + e.getMessage());
+        }
+    }
+}
+
+// Client thread
+class ClientTask implements Runnable {
+    public void run() {
+        try (Socket socket = new Socket("localhost", 5000);
+             BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+             PrintWriter out = new PrintWriter(socket.getOutputStream(), true)) {
+
+            System.out.println("[Client] Connection successful.");
+
+            String message = "Hello Server!";
+            out.println(message);
+            System.out.println("[Client] Sent: " + message);
+
+            String reply = in.readLine();
+            System.out.println("[Client] Received: " + reply);
+
+            System.out.println("[Client] Connection closed.");
+
+        } catch (ConnectException ce) {
+            System.out.println("[Client] Connection refused. Server not running.");
+        } catch (IOException e) {
+            System.out.println("[Client] Error: " + e.getMessage());
+        }
+    }
+}
