@@ -1,0 +1,191 @@
+TC1: Two threads start → Both race together 
+class Racer extends Thread {
+    private String name;
+    private int sleepTime;
+
+    Racer(String name, int sleepTime) {
+        this.name = name;
+        this.sleepTime = sleepTime;
+    }
+
+    public void run() {
+        try {
+            for (int i = 1; i <= 5; i++) {
+                System.out.println(name + " ran step " + i);
+                Thread.sleep(sleepTime);
+            }
+            System.out.println(name + " finished the race!");
+        } catch (InterruptedException e) {
+            System.out.println(name + " was interrupted.");
+        }
+    }
+}
+
+public class RaceSimulation {
+    public static void main(String[] args) {
+    	System.out.println("JANANI M");
+        System.out.println("2117240070123");
+        Racer racerA = new Racer("Thread A", 500);
+        Racer racerB = new Racer("Thread B", 500);
+
+        racerA.start();
+        racerB.start();
+    }
+}
+ 
+
+
+TC2: Sleep time different → One finishes first 
+class Racer extends Thread {
+    private String name;
+    private int sleepTime;
+
+    Racer(String name, int sleepTime) {
+        this.name = name;
+        this.sleepTime = sleepTime;
+    }
+
+    public void run() {
+        try {
+            for (int i = 1; i <= 5; i++) {
+                System.out.println(name + " ran step " + i);
+                Thread.sleep(sleepTime);
+            }
+            System.out.println(name + " finished the race!");
+        } catch (InterruptedException e) {
+            System.out.println(name + " was interrupted.");
+        }
+    }
+}
+
+public class RaceSimulation {
+    public static void main(String[] args) {
+    	System.out.println("JANANI M");
+        System.out.println("2117240070123");
+        	Racer racerA = new Racer("Thread A", 700); // slower
+            Racer racerB = new Racer("Thread B", 300); // faster
+
+            racerA.start();
+            racerB.start();
+        }
+    }
+
+ 
+
+
+
+
+
+TC3: Race between thread A and thread B → Output may vary 
+class Racer extends Thread {
+    private String name;
+    private int sleepTime;
+
+    Racer(String name, int sleepTime) {
+        this.name = name;
+        this.sleepTime = sleepTime;
+    }
+
+    public void run() {
+        try {
+            for (int i = 1; i <= 5; i++) {
+                System.out.println(name + " ran step " + i);
+                Thread.sleep(sleepTime);
+            }
+            System.out.println(name + " finished the race!");
+        } catch (InterruptedException e) {
+            System.out.println(name + " was interrupted.");
+        }
+    }
+}
+
+public class RaceSimulation {
+    public static void main(String[] args) {
+    	System.out.println("JANANI M");
+        System.out.println("2117240070123");
+        Racer racerA = new Racer("Thread A", 400);
+        Racer racerB = new Racer("Thread B", 400);
+
+        racerA.start();
+        racerB.start();
+    }
+}
+
+
+ 
+
+
+TC4: Add a third thread → Output includes three racers 
+class Racer extends Thread {
+    private String name;
+    private int sleepTime;
+
+    Racer(String name, int sleepTime) {
+        this.name = name;
+        this.sleepTime = sleepTime;
+    }
+
+    public void run() {
+        try {
+            for (int i = 1; i <= 5; i++) {
+                System.out.println(name + " ran step " + i);
+                Thread.sleep(sleepTime);
+            }
+            System.out.println(name + " finished the race!");
+        } catch (InterruptedException e) {
+            System.out.println(name + " was interrupted.");
+        }
+    }
+}
+
+public class RaceSimulation {
+    public static void main(String[] args) {
+    	System.out.println("JANANI M");
+        System.out.println("2117240070123");
+        Racer racerA = new Racer("Thread A", 500);
+        Racer racerB = new Racer("Thread B", 400);
+        Racer racerC = new Racer("Thread C", 600);
+
+        racerA.start();
+        racerB.start();
+        racerC.start();
+    }
+}
+
+ 
+
+
+TC5: Threads with same sleep → Output may interleave 
+class Racer extends Thread {
+    private String name;
+    private int sleepTime;
+
+    Racer(String name, int sleepTime) {
+        this.name = name;
+        this.sleepTime = sleepTime;
+    }
+
+    public void run() {
+        try {
+            for (int i = 1; i <= 5; i++) {
+                System.out.println(name + " ran step " + i);
+                Thread.sleep(sleepTime);
+            }
+            System.out.println(name + " finished the race!");
+        } catch (InterruptedException e) {
+            System.out.println(name + " was interrupted.");
+        }
+    }
+}
+
+public class RaceSimulation {
+    public static void main(String[] args) {
+    	System.out.println("JANANI M");
+        System.out.println("2117240070123");
+        Racer racerA = new Racer("Thread A", 500);
+        Racer racerB = new Racer("Thread B", 500);
+
+        racerA.start();
+        racerB.start();
+    }
+}
